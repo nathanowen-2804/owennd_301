@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+
+    <script src="https://kit.fontawesome.com/0c5bdac1be.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #301331;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pricing-grid {
+            display: flex;
+        align-items: stretch;
+            gap: 28px;
+        }
+
+        .tier {
+            width: 215px;
+            padding: 15px 28px 22px;
+            background-color: #d19cda;
+            border-radius: 4px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .tier h2 {
+            margin: 5px 0 10px;
+            font-size: 18px;
+        }
+
+        .tier ul {
+            margin: 0 0 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tier li {
+            padding: 3px 0;
+            border-bottom: 1px solid #555;
+            font-size: 11px;
+        }
+
+        .tier li:last-child {
+            border-bottom: none;
+        }
+
+        .tier button {
+            margin-top: auto;
+            align-self: center;
+
+            padding: 6px 10px;
+            font-size: 10px;
+            background-color: #c65bd0;
+            border: 1px solid #85378c;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 22px;
+        }
+
+        .green {
+            background-color: #58e943;
+        }
+
+        .yellow {
+            background-color: #fff542;
+        }
+
+        .orange {
+            background-color: #fbb83d;
+        }
+
+        .phone {
+            position: fixed;
+            right: -37px;
+            bottom: 25px;
+
+            padding: 10px 45px;
+            background-color: #f5a623;
+
+            font-weight: bold;
+            font-size: 12px;
+
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pricing-grid">
+
+        <div class="tier">
+            <div class="badge green">
+                <i class="fas fa-hand-holding-usd"></i>
+            </div>
+
+            <h2>Economy</h2>
+
+            <ul>
+                <li>Amet quisquam unde?</li>
+                <li>Dolor quam facilis.</li>
+                <li>Elit voluptas qui.</li>
+                <li>Amet veniam sapiente.</li>
+                <li>Adipisicing nobis at?</li>
+            </ul>
+
+            <button>Save Money</button>
+        </div>
+
+        <div class="tier">
+            <div class="badge yellow">
+                <i class="fas fa-medal"></i>
+            </div>
+
+            <h2>Preferred</h2>
+
+            <ul>
+                <li>Elit vel sit!</li>
+                <li>Lorem maiores iusto?</li>
+                <li>Adipisicing reiciendis impedit.</li>
+                <li>Ipsum quas ea!</li>
+                <li>Elit maiores similique.</li>
+                <li>Ipsum iusto excepturi?</li>
+                <li>Lorem rem porro?</li>
+            </ul>
+
+            <button>Rival the Competition</button>
+        </div>
+
+        <div class="tier">
+            <div class="badge orange">
+                <i class="fas fa-microscope"></i>
+            </div>
+
+            <h2>Premium</h2>
+
+            <ul>
+                <li>Elit facilis corrupti</li>
+                <li>Amet asperiores consequatur</li>
+                <li>Dolor praesentium unde</li>
+                <li>Lorem dicta blanditiis!</li>
+                <li>Consectetur amet praesentium</li>
+                <li>Dolor veniam recusandae?</li>
+                <li>Consectetur sequi quidem.</li>
+                <li>Dolor perferendis architecto</li>
+                <li>Sit error vel.</li>
+                <li>Sit vel exercitationem</li>
+                <li>Elit animi eveniet.</li>
+                <li>Consectetur velit sequi.</li>
+            </ul>
+
+            <button>Become a Power User</button>
+        </div>
+
+    </div>
+
+    <div class="phone">
+        CALL 1-800-555-5555
+    </div>
+
+</body>
+
+</html>
