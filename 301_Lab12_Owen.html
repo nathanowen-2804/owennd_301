@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">What is your name?</label>
+        <input id="name">
+        <button id="bttn_name" type="button">Submit</button>
+        <p id="result_name"></p>
+
+        <p>Choose your arithmetic:</p>
+        <input type="radio" name="arithmetic" value="add">addition<br>
+        <input type="radio" name="arithmetic" value="subtract">subtraction<br>
+        <input type="radio" name="arithmetic" value="multiply">multiplication<br>
+        <input type="radio" name="arithmetic" value="divide">division<br>
+        <p></p>
+
+        <label for="nbr1">Number 1</label>
+        <input id="nbr1">
+        <label for="nbr2">Number 2</label>
+        <input id="nbr2">
+        <button id="calc" type="button">Submit</button>
+
+        <p>result:</p>
+        <p id="result"></p>
+
+    </form>
+    <script>
+        const name = document.getElementById('name');
+        const result_name = document.getElementById('result_name');
+        document.getElementById('bttn_name').addEventListener('click', function(){
+            result_name.textContent = 'Hello ' + name.value + '!';
+        });
+
+        document.getElementById('calc').addEventListener('click', function(){
+            const arithmetic = document.querySelector ('[name = arithmetic]:checked');
+            console.log(name.value);
+            const nbr1 = document.getElementById('nbr1');
+            const nbr2 = document.getElementById('nbr2');
+            const result = document.getElementById('result');
+
+            if (arithmetic.value == 'add')
+        
+            {result.textContent = Number(nbr1.value) + Number(nbr2.value)}
+
+            elif (arithmetic.value == 'subtract')
+        
+            {result.textContent = Number(nbr1.value) - Number(nbr2.value)}
+
+            elif (arithmetic.value == 'multiply')
+        
+            {result.textContent = Number(nbr1.value) * Number(nbr2.value)}
+
+            elif (arithmetic.value == 'divide')
+        
+            {result.textContent = Number(nbr1.value) / Number(nbr2.value)}
+
+        })
+
+    </script>
+</body>
+</html>
