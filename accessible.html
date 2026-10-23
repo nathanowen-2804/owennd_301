@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Activities - Explore Harrisonburg</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header>
+        <h1>Explore Harrisonburg Today</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hikes.html">Hiking</a>
+        <a href="parks.html">Parks</a>
+        <a href="sports.html">Sports</a>
+        <a href="accessible.html">Accessible</a>
+    </nav>
+
+    <main>
+
+        <!-- Accessible recreation locations -->
+        <section>
+            <h2>Accessible Outdoor Activities</h2>
+            <p>Explore recreational activities around Harrisonburg
+                with accessible features. Click a location
+                to learn more.</p>
+
+            <details class="access-item">
+                <summary>A Dream Come True Playground</summary>
+                <p><strong>Address:</strong> 1050 Neff Avenue</p>
+                <p>An inclusive playground featuring accessible
+                    equipment, family comfort stations, and
+                    a wheelchair-accessible swing.</p>
+                <p>The Liberty Swing requires advance arrangements
+                    and training to use.</p>
+                <a href="https://www.harrisonburgva.gov/dream-come-true-playground">
+                    A Dream Come True Playground Information
+                </a>
+            </details>
+
+            <details class="access-item">
+                <summary>Edith J. Carrier Arboretum</summary>
+                <p><strong>Location:</strong> James Madison University</p>
+                <p>The Plecker Pond Loop is a wheelchair-accessible
+                    trail surrounding the pond, with opportunities
+                    to enjoy gardens and wildlife.</p>
+                <p>Other arboretum trails may have more difficult
+                    terrain.</p>
+                <a href="https://www.jmu.edu/arboretum/visit/index.shtml">
+                    Edith J. Carrier Arboretum Information
+                </a>
+            </details>
+
+            <details class="access-item">
+                <summary>Hillandale Park</summary>
+                <p><strong>Address:</strong> 801 Hillandale Avenue</p>
+                <p>Picnic shelters 1, 3, 6, 7, 10, and 12
+                    are wheelchair-accessible. The park also
+                    has accessible comfort stations.</p>
+                <p>Accessibility of individual walking trails
+                    may vary.</p>
+                <a href="https://www.harrisonburgva.gov/hillandale-park">
+                    Hillandale Park Accessibility Information
+                </a>
+            </details>
+
+            <details class="access-item">
+                <summary>Northend Greenway</summary>
+                <p><strong>Location:</strong> Northern Harrisonburg</p>
+                <p>A shared-use walking and biking path
+                    with a hard surface and generally gentle slopes.</p>
+                <p>Some sections include street connections.
+                    Check the route before visiting to ensure
+                    it meets your accessibility needs.</p>
+                <a href="https://www.harrisonburgva.gov/biking-walking">
+                    Northend Greenway and Walking Paths Information
+                </a>
+            </details>
+        </section>
+
+        <!-- Activity suggestion form -->
+        <section class="suggestion-form">
+            <h2>Suggest an Activity</h2>
+            <p>Know another accessible outdoor activity?
+                Share your suggestion below.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Practice form: your suggestion was not sent.');">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="suggestion">Activity Suggestion:</label>
+                <textarea id="suggestion" name="suggestion"
+                    rows="4" required></textarea>
+
+                <button type="submit">Submit Suggestion</button>
+            </form>
+
+            <p>This is a demonstration form. Suggestions are not saved or sent.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Explore Harrisonburg Today</p>
+    </footer>
+
+</body>
+</html>
+

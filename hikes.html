@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking - Explore Harrisonburg</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header>
+        <h1>Explore Harrisonburg Today</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hikes.html">Hiking</a>
+        <a href="parks.html">Parks</a>
+        <a href="sports.html">Sports</a>
+        <a href="accessible.html">Accessible</a>
+    </nav>
+
+    <!-- Hiking page -->
+    <main>
+        <h2>Hiking Trails</h2>
+        <p>Click a numbered marker to learn about a nearby hike.</p>
+
+        <div class="hike-layout">
+
+            <!-- Map and clickable markers -->
+            <div class="map">
+                <img src="images/301_Project1_hikes_image-1.webp"
+                    alt="Regional map of Harrisonburg and nearby hiking areas">
+
+                <button type="button" class="pin pin1"
+                    aria-label="Rocktown Trails"
+                    onclick="showHike('Rocktown Trails', 'Trails for beginners through advanced hikers at Hillandale Park, with options for hiking, running, and mountain biking.', 'https://visitharrisonburgva.com/rocktown-trails/')">1</button>
+
+                <button type="button" class="pin pin2"
+                    aria-label="Hidden Rocks"
+                    onclick="showHike('Hidden Rocks', 'Moderate, approximately 2.2 miles. A forest hike with stream crossings, rocky cliffs, and scenic views.', 'https://visitharrisonburgva.com/hidden-rocks/')">2</button>
+
+                <button type="button" class="pin pin3"
+                    aria-label="Fridley Gap"
+                    onclick="showHike('Fridley Gap', 'Beginner, approximately 1 mile. A forest hike following a stream toward a swimming hole.', 'https://visitharrisonburgva.com/fridley-gap/')">3</button>
+            </div>
+
+            <!-- Selected hike information -->
+            <section class="hike-info" aria-live="polite">
+                <h2 id="hike-name">Select a Hike</h2>
+
+                <p id="hike-description">
+                    Click one of the numbered markers on the map
+                    to see information about that trail.
+                </p>
+
+                <a id="hike-link"
+                    href="https://visitharrisonburgva.com/hiking-trails/">
+                    Browse Hiking Trails
+                </a>
+            </section>
+
+        </div>
+
+        <p class="map-credit">
+            Map by Lgnhes97,
+            <a href="https://creativecommons.org/licenses/by/3.0/">
+                CC BY 3.0
+            </a>,
+            via
+            <a href="https://commons.wikimedia.org/wiki/File:Harrisonburg_(Virginia)_bordering_Rockingham_County.svg">
+                Wikimedia Commons
+            </a>.
+        </p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Explore Harrisonburg Today</p>
+    </footer>
+
+    <!-- Change information when a marker is clicked -->
+    <script>
+        function showHike(name, description, link) {
+            document.getElementById("hike-name").textContent = name;
+            document.getElementById("hike-description").textContent = description;
+            document.getElementById("hike-link").href = link;
+            document.getElementById("hike-link").textContent =
+                "Trail Information: " + name;
+        }
+    </script>
+
+</body>
+</html>

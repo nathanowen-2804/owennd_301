@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports - Explore Harrisonburg</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header>
+        <h1>Explore Harrisonburg Today</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hikes.html">Hiking</a>
+        <a href="parks.html">Parks</a>
+        <a href="sports.html">Sports</a>
+        <a href="accessible.html">Accessible</a>
+    </nav>
+
+    <!-- Sports selection -->
+    <main>
+        <section>
+            <h2>I want to play <span id="chosen" aria-live="polite">_____</span></h2>
+            <p>Select one or more sports to find places to play.</p>
+
+            <div class="sport-buttons">
+                <button type="button" aria-pressed="false"
+                    onclick="chooseSport('basketball', this)">Basketball</button>
+
+                <button type="button" aria-pressed="false"
+                    onclick="chooseSport('tennis', this)">Tennis</button>
+
+                <button type="button" aria-pressed="false"
+                    onclick="chooseSport('pickleball', this)">Pickleball</button>
+
+                <button type="button" aria-pressed="false"
+                    onclick="chooseSport('disc', this)">Disc Golf</button>
+            </div>
+        </section>
+
+        <!-- Sports locations -->
+        <section>
+            <h2>Where to Play</h2>
+            <p id="empty">Choose a sport to see locations.</p>
+
+            <!-- Basketball -->
+            <div id="basketball" hidden>
+                <h3>Basketball</h3>
+
+                <article class="sport-place">
+                    <h4>Ralph Sampson Park</h4>
+                    <p>431 East Washington Street</p>
+                    <p>Three outdoor basketball courts.</p>
+                    <a href="https://www.harrisonburgva.gov/ralph-sampson-park">
+                        Ralph Sampson Park Information
+                    </a>
+                </article>
+
+                <article class="sport-place">
+                    <h4>Morrison Park</h4>
+                    <p>461 2nd Street</p>
+                    <p>Outdoor basketball court.</p>
+                    <a href="https://www.harrisonburgva.gov/morrison-park">
+                        Morrison Park Information
+                    </a>
+                </article>
+            </div>
+
+            <!-- Tennis -->
+            <div id="tennis" hidden>
+                <h3>Tennis</h3>
+
+                <article class="sport-place">
+                    <h4>Purcell Park</h4>
+                    <p>41 Monument Avenue</p>
+                    <p>Three outdoor tennis courts.</p>
+                    <a href="https://www.harrisonburgva.gov/purcell-park">
+                        Purcell Park Information
+                    </a>
+                </article>
+            </div>
+
+            <!-- Pickleball -->
+            <div id="pickleball" hidden>
+                <h3>Pickleball</h3>
+
+                <article class="sport-place">
+                    <h4>Morrison Park</h4>
+                    <p>461 2nd Street</p>
+                    <p>Four outdoor pickleball courts.</p>
+                    <a href="https://www.harrisonburgva.gov/morrison-park">
+                        Morrison Park Information
+                    </a>
+                </article>
+
+                <article class="sport-place">
+                    <h4>Purcell Park</h4>
+                    <p>41 Monument Avenue</p>
+                    <p>Two outdoor pickleball courts.</p>
+                    <a href="https://www.harrisonburgva.gov/purcell-park">
+                        Purcell Park Information
+                    </a>
+                </article>
+            </div>
+
+            <!-- Disc Golf -->
+            <div id="disc" hidden>
+                <h3>Disc Golf</h3>
+
+                <article class="sport-place">
+                    <h4>Westover Park</h4>
+                    <p>305 South Dogwood Drive</p>
+                    <p>Outdoor disc golf course.</p>
+                    <a href="https://www.harrisonburgva.gov/westover">
+                        Westover Park Information
+                    </a>
+                </article>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Explore Harrisonburg Today</p>
+    </footer>
+
+    <!-- Sports selection JavaScript -->
+    <script>
+        let selected = [];
+
+        function chooseSport(sport, button) {
+            let name = button.textContent;
+            let locations = document.getElementById(sport);
+
+            if (selected.includes(name)) {
+                selected = selected.filter(item => item !== name);
+                locations.hidden = true;
+                button.setAttribute("aria-pressed", "false");
+            } else {
+                selected.push(name);
+                locations.hidden = false;
+                button.setAttribute("aria-pressed", "true");
+            }
+
+            document.getElementById("chosen").textContent =
+                selected.join(", ") || "_____";
+
+            document.getElementById("empty").hidden =
+                selected.length > 0;
+        }
+    </script>
+
+</body>
+</html>
+
